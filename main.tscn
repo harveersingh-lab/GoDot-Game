@@ -2,23 +2,49 @@
 
 [ext_resource type="PackedScene" uid="uid://d3as3336dn2hr" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cuus7283sdaxr" path="res://platform.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://gs61aa4llkum" path="res://Background.png" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dbe7egxcj0w42" path="res://goal.tscn" id="4_1bvp3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
 distance = 45.232395
 
 [node name="Main" type="Node2D" unique_id=489217641]
 
+[node name="Background" type="Area2D" parent="." unique_id=427703753]
+
+[node name="Island" type="Sprite2D" parent="Background" unique_id=1487182462]
+position = Vector2(575.5, 326.24997)
+scale = Vector2(11.47, 6.4350004)
+texture = ExtResource("3_h2yge")
+
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1239412408]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=66965025]
-position = Vector2(570, 692)
+position = Vector2(574, 564)
 shape = SubResource("WorldBoundaryShape2D_ig7tw")
 
 [node name="Platform" parent="." unique_id=1715865746 instance=ExtResource("2_0xm2m")]
-position = Vector2(297, 326)
+position = Vector2(338, 188)
 
 [node name="Platform2" parent="." unique_id=1225688201 instance=ExtResource("2_0xm2m")]
-position = Vector2(32, 375)
+position = Vector2(-16, 265)
+
+[node name="Platform3" parent="." unique_id=1739466055 instance=ExtResource("2_0xm2m")]
+position = Vector2(329, 16)
+
+[node name="Platform4" parent="." unique_id=1164808946 instance=ExtResource("2_0xm2m")]
+position = Vector2(591, 114)
+
+[node name="Platform5" parent="." unique_id=421325289 instance=ExtResource("2_0xm2m")]
+position = Vector2(-2, -21)
+
+[node name="Platform6" parent="." unique_id=727761385 instance=ExtResource("2_0xm2m")]
+position = Vector2(-311, 32)
+
+[node name="Goal" parent="." unique_id=1864999373 instance=ExtResource("4_1bvp3")]
+position = Vector2(-57, 109)
 
 [node name="Player" parent="." unique_id=1296936782 instance=ExtResource("1_ig7tw")]
 position = Vector2(579, 245)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=364857616]
