@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bk5g0fedqeo11"]
+
+[ext_resource type="Script" uid="uid://cqvd8engkhrwr" path="res://lose_screen.gd" id="1_cbtnu"]
+
+[node name="lose_screen" type="Control" unique_id=993180092]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cbtnu")
+
+[node name="Label" type="Label" parent="." unique_id=2018590170]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 167.0
+offset_right = 586.0
+offset_bottom = 190.0
+text = "You Lose"
+
+[node name="Button" type="Button" parent="." unique_id=1483810472]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 244.0
+offset_right = 602.0
+offset_bottom = 275.0
+text = "Play Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

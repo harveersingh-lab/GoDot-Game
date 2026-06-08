@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dxr606k6tulnw"]
+
+[ext_resource type="Script" uid="uid://c4ved3vuws4h8" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://drl6k2a005mn0" path="res://Raptor.png" id="2_qi2p4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iifgy"]
+size = Vector2(93, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epg4t"]
+size = Vector2(126.0625, 39.25)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=596907827]
+script = ExtResource("1_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=147681705]
+position = Vector2(528, 231.00003)
+scale = Vector2(1.45, 1.09)
+texture = ExtResource("2_qi2p4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1580922454]
+position = Vector2(523, 262)
+shape = SubResource("RectangleShape2D_iifgy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=253523769]
+position = Vector2(358, 229)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=870631906]
+position = Vector2(173.96875, -12.625)
+shape = SubResource("RectangleShape2D_epg4t")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
