@@ -12,10 +12,10 @@ func _physics_process(delta):
 	velocity.x = speed * direction
 	move_and_slide()
 
-	if global_position.x < start_x - 500:
+	if global_position.x < start_x - 300:
 		direction = 1
 
-	if global_position.x > start_x + 500:
+	if global_position.x > start_x + 300:
 		direction = -1
 
 

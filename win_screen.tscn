@@ -12,6 +12,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_l2arl")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1034386773]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 650.0
+color = Color(0.87132514, 0.5316599, 0.50144595, 1)
+
 [node name="Label" type="Label" parent="." unique_id=1807858045]
 layout_mode = 0
 offset_left = 422.0
@@ -24,10 +30,10 @@ text = "You win"
 
 [node name="Button" type="Button" parent="." unique_id=946459885]
 layout_mode = 0
-offset_left = 529.0
-offset_top = 318.0
-offset_right = 617.0
-offset_bottom = 349.0
+offset_left = 484.0
+offset_top = 310.0
+offset_right = 678.0
+offset_bottom = 375.0
 theme_override_colors/font_color = Color(0.5753646, 0.54381007, 0.9967362, 1)
 theme_override_styles/hover = SubResource("StyleBoxFlat_731nq")
 text = "Play Again"
